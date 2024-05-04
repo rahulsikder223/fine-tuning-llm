@@ -14,6 +14,7 @@ Enter your model names present in HuggingFace Library in the "models" array:
 The framework has been trained and tested for classification tasks using Movie Reviews(MR), Customer Reviews(CR), Multi-Perspective Question Answering (MPQA) and Subjective vs Objective(SUBJ) datasets from SentEval. After fine-tuning, the model generates embeddings of the sentences in the train and test sets, and uses a Logistic Regression model to train and test using the embedding vector as feature set and the labels for classification. Any dataset should be a Pandas Dataframe having at least the following two columns:
 
 **sentence**: This column should have the list of sentences for processing and training.
+
 **label**: This column will contain the labels for classification.
 
 Run the following method for classification task to get the results matrix of models using all the loss function combinations:
@@ -26,6 +27,7 @@ Here, a list of SentEval datasets have been provided for training and evaluation
 The framework has been trained and tested for sentence similarity tasks using STS12-16, STS-Benchmark and SICK-R datasets from SemEval. The fine-tuned model will generate embeddings of the test sentence pair, calculate the cosine simlarity between the embeddings of each sentence pair, and finally calculate the Spearman's Rank Correlation Coefficient. Any dataset should be a Pandas Dataframe having at least the following three columns:
 
 **sentence1** and **sentence2**: These columns should have the list of sentence pairs for processing and training.
+
 **score**: This column will contain the similarity scores.
 
 Run the following method for sentence similarity task to get the results matrix of models using all the loss function combinations:
