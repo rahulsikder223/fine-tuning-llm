@@ -40,10 +40,10 @@ Here, the STS datasets are obtained using the **get_sts_dataset(name)** function
 2. **In-Batch Negatives Loss**: The in-batch negative samples in a batch which are identical but not explicitly labelled as positive, are identified and labelled as positive, thus reducing noise.
 3. **Angle Loss**: Both the other loss functions are dependant on cosine, and cosine has saturation zones where training becomes extremely slow. To mitigate this, an optimization strategy is used which optimizes the angle difference in complex space.
 
-The weight combinations of each objective function can be modified:
+The weight combinations of each loss function can be modified. For example (1, 0, 0) means that only the Cosine Loss will be activated with weight = 1. A weight of 0 will exclude the loss function:
 ![Loss](https://github.com/rahulsikder223/fine-tuning-llm/assets/26866342/677fac1a-4a14-430e-9f8f-f883bb37fd5a)
 
-The temperature hyperparameters for each loss function can be modified in the **loss_kwargs** along with their individual weights:
+The temperature hyperparameters for each loss function (**cosine_tau**, **ibn_tau** and **angle_tau**) can be modified in the **loss_kwargs** along with their individual weights:
 
 ![Loss_kwargs](https://github.com/rahulsikder223/fine-tuning-llm/assets/26866342/797476c8-010e-4162-8cbc-9512ae7200fc)
 
