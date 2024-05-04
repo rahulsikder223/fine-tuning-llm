@@ -1,5 +1,5 @@
-# Fine-Tuning Language Models
-### Fine-Tuning Language Models to Improv Quality of Text Embeddings for Classification and Semantic Textual Similarity
+# Fine-Tuning Framework for Language Models
+### A Fine-Tuning framework for Language Models to Improv Quality of Text Embeddings for Classification and Semantic Textual Similarity
  
 Here, we have created a language model fine-tuning framework which is very intuitive and easy to use. We have control over tokenization, pooling, data collation and loss functions to train and test on two different types of tasks, classification and semantic textual similarity.
 
