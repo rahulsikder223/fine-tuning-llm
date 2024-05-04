@@ -44,6 +44,7 @@ The weight combinations of each objective function can be modified:
 ![Loss](https://github.com/rahulsikder223/fine-tuning-llm/assets/26866342/677fac1a-4a14-430e-9f8f-f883bb37fd5a)
 
 The temperature hyperparameters for each loss function can be modified in the **loss_kwargs** along with their individual weights:
+
 ![Loss_kwargs](https://github.com/rahulsikder223/fine-tuning-llm/assets/26866342/797476c8-010e-4162-8cbc-9512ae7200fc)
 
 The results matrix can be exported into .npy files once the process is complete, which can be fed to the **results_plots_senteval_sts.ipynb** file for plotting the results. This gives an insight about the overall model performances across all datasets using all possible loss function combinations.
