@@ -13,7 +13,7 @@ Every step from fine-tuning to creating performance result plots have been compi
 **fine_tuning_bert_models_SentEval_STS.ipynb**: For fine-tuning and results matrix export.
 
 **results_plots_senteval_sts.ipynb**: For creating performance plots for the generated results matrix.
-__________________________________________________________________________________________________________________________________________________________________________
+__________
 
 ### Model Selection:
 
@@ -29,7 +29,12 @@ The framework has been trained and tested for classification tasks using Movie R
 
 **label**: This column will contain the labels for classification.
 
-Run the following method for classification task to get the results matrix of models using all the loss function combinations:
+The dataset should look something like this:
+
+![Classification_Dataset](https://github.com/rahulsikder223/fine-tuning-llm/assets/26866342/27555f30-27d8-4ae7-81f0-b62a8b990b8a)
+
+_________
+The following method is used for classification task to get the results matrix of models using all the loss function combinations:
 
 **driver_senteval()**
 
@@ -43,11 +48,20 @@ The framework has been trained and tested for sentence similarity tasks using ST
 
 **score**: This column will contain the similarity scores.
 
-Run the following method for sentence similarity task to get the results matrix of models using all the loss function combinations:
+The dataset should look something like this:
+
+![STS_Dataset](https://github.com/rahulsikder223/fine-tuning-llm/assets/26866342/f4ab8ad2-cac8-4c00-bafd-33f3e9a2d74d)
+
+_________
+The following method is used for sentence similarity task to get the results matrix of models using all the loss function combinations:
 
 **driver_sts()**
 
 Here, the STS datasets are obtained using the **get_sts_dataset(name)** function and their names have been passed to the **sts_datasets** array (STS12-16, STS-B and SICK-R). For custom datasets, you need to create a similar importer function following the column specifications mentioned above, pass the names of the datasets in the **sts_datasets** array and pass the custom importer function in the **dataset preparation** stage of **driver_sts()** instead of **get_sts_dataset(name)**.
+
+__________
+The **results matrix** will include the corresponding classification accuracy or Spearman's rank correlation coefficient values for all models across all datasets using all possible combinations of loss functions.
+__________
 
 ### Available Loss Functions:
 
