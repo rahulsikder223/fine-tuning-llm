@@ -3,6 +3,18 @@
  
 Here, we have created a language model fine-tuning framework which is very intuitive and easy to use. We have control over tokenization, pooling, data collation and loss functions to train and test on two different types of tasks, classification and semantic textual similarity.
 
+__________
+### For now this framework fine-tunes all the BERT-based models like BERT-base, BERT-large, RoBERTA, SBERT etc. Further update will include fine-tuning LLMs like Llama.
+
+__________
+
+Every step from fine-tuning to creating performance result plots have been compiled in two notebook files:
+
+**fine_tuning_bert_models_SentEval_STS.ipynb**: For fine-tuning and results matrix export.
+
+**results_plots_senteval_sts.ipynb**: For creating performance plots for the generated results matrix.
+__________________________________________________________________________________________________________________________________________________________________________
+
 ### Model Selection:
 
 Enter your model names present in HuggingFace Library in the "models" array:
@@ -22,6 +34,7 @@ Run the following method for classification task to get the results matrix of mo
 **driver_senteval()**
 
 Here, a list of SentEval datasets have been provided for training and evaluation, which are obtained using the **get_senteval_dataset(name)** function and their names have been passed to the **senteval_datasets** array (MR, CR, MPQA and SUBJ). For custom datasets, you need to create a similar importer function following the column specifications mentioned above, pass the names of the datasets in the **senteval_datasets** array and pass the custom importer function in the **dataset preparation** stage of **driver_senteval()** instead of **get_senteval_dataset(name)**.
+_________
 
 #### Semantic Textual Similarity:
 The framework has been trained and tested for sentence similarity tasks using STS12-16, STS-Benchmark and SICK-R datasets from SemEval. The fine-tuned model will generate embeddings of the test sentence pair, calculate the cosine simlarity between the embeddings of each sentence pair, and finally calculate the Spearman's Rank Correlation Coefficient. Any dataset should be a Pandas Dataframe having at least the following three columns:
