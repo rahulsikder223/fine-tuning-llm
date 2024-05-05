@@ -1,7 +1,7 @@
 # Fine-Tuning Framework for Language Models
 ### A Fine-Tuning framework for Language Models to enhance the quality of Text Embeddings for Classification and Semantic Textual Similarity
  
-Here, we have created a language model fine-tuning framework which is very intuitive and easy to use. We have control over tokenization, pooling, data collation and loss functions to train and test on two different types of tasks, classification and semantic textual similarity.
+Here, we have created a language model fine-tuning framework which is intuitive and easy to use. We have control over tokenization, pooling, data collation and loss functions to train and test on two different types of tasks, classification and semantic textual similarity.
 
 __________
 ### For now this framework fine-tunes all the BERT-based models like BERT-base, BERT-large, RoBERTA, SBERT etc. Further update will include fine-tuning LLMs like Llama.
